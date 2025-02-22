@@ -2,65 +2,69 @@ import styled from "@emotion/styled";
 import { Box, Text } from "rebass";
 
 export const StatsWrapper = styled(Box)`
-   background-color: #f4f7fa;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
-  max-width: 900px;
+  background-color: #f9f9fb;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
   margin: auto;
+  @media (max-width: 768px) {
+    padding: 30px;
+  }
 `;
 
 export const StatsTitle = styled(Text)`
-  font-size: 30px;
-  font-weight: 700;
+  font-size: 35px;
+  font-weight: 800;
   text-align: center;
-  margin-bottom: 20px;
-  color: #5e72e4;
+  margin-bottom: 30px;
+  color: #4e73df;
 `;
 
-export const SectionTitle = styled(Text)`
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: #4a4a4a;
+export const Card = styled(Box)`
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 export const StatText = styled(Text)`
   font-size: 18px;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   color: #555;
+  line-height: 1.6;
 `;
 
 export const SelectDropdown = styled.select`
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
   font-size: 16px;
-  background-color: #f9fafb;
+  background-color: #f1f5f9;
   color: #333;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
 
   &:hover {
-    border-color: #5e72e4;
-    background-color: #f1f5fb;
+    border-color: #4e73df;
+    background-color: #e6eff8;
   }
 `;
 
-export const Card = styled(Box)`
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 12px;
+export const SectionTitle = styled(Text)`
+  font-size: 24px;
+  font-weight: bold;
   margin-bottom: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-`;
-export const SongListWrapper = styled(Box)`
-  background-color: #f4f7fa;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
-  max-width: 900px;
-  margin: auto;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 `;

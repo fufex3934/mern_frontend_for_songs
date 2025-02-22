@@ -41,7 +41,7 @@ const SongStats: React.FC = () => {
   }, []);
 
   if (!stats) {
-    return <Text>Loading...</Text>;
+    return <Text style={{ textAlign: "center" }}>Loading...</Text>;
   }
 
   const filteredSongsByGenre = genre
@@ -52,11 +52,11 @@ const SongStats: React.FC = () => {
     <StatsWrapper>
       <StatsTitle>Song Statistics</StatsTitle>
 
-      <Card>
-        <StatText>Total Songs: {stats.totalSongs}</StatText>
-        <StatText>Total Artists: {stats.totalArtists}</StatText>
-        <StatText>Total Albums: {stats.totalAlbums}</StatText>
-        <StatText>Total Genres: {stats.totalGenres}</StatText>
+      <Card >
+      <StatText>Total Songs - {stats.totalSongs}</StatText>
+        <StatText>Total Artists - {stats.totalArtists}</StatText>
+        <StatText>Total Albums - {stats.totalAlbums}</StatText>
+        <StatText>Total Genres - {stats.totalGenres}</StatText>
       </Card>
 
       <Card>
@@ -79,7 +79,7 @@ const SongStats: React.FC = () => {
         {filteredSongsByGenre.length > 0 ? (
           filteredSongsByGenre.map((stat) => (
             <StatText key={stat._id}>
-              {stat._id}: {stat.count} song(s)
+              {stat._id} - {stat.count} song(s)
             </StatText>
           ))
         ) : (
@@ -92,7 +92,7 @@ const SongStats: React.FC = () => {
         {stats.songsByArtist.length > 0 ? (
           stats.songsByArtist.map((stat) => (
             <StatText key={stat._id}>
-              {stat._id}: {stat.songCount} song(s), {stat.albumCount} album(s)
+              {stat._id} - {stat.songCount} song(s), {stat.albumCount} album(s)
             </StatText>
           ))
         ) : (
@@ -105,7 +105,7 @@ const SongStats: React.FC = () => {
         {stats.songsInAlbums.length > 0 ? (
           stats.songsInAlbums.map((stat) => (
             <StatText key={stat._id}>
-              {stat._id}: {stat.count} song(s)
+              {stat._id} - {stat.count} song(s)
             </StatText>
           ))
         ) : (
