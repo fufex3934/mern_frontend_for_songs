@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Box, Text } from "rebass";
+import { Box, Text, Button } from "rebass";
 
 export const AddSongWrapper = styled(Box)`
   padding: 40px;
@@ -30,3 +30,18 @@ export const StyledInput = styled.input`
     border-color: #007bff;
   }
 `;
+export const ActionButton = styled(Button)`
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  width: 100%;  
+  padding: 12px; 
+
+  &:hover {
+    background-color: #0056b3;
+  }
+`;
+

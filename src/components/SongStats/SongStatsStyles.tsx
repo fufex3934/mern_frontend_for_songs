@@ -2,14 +2,12 @@ import styled from "@emotion/styled";
 import { Box, Text } from "rebass";
 
 export const StatsWrapper = styled(Box)`
+   background-color: #f4f7fa;
   padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
   max-width: 900px;
   margin: auto;
-  background-color: #f4f7fa;
-  border-radius: 15px;
-  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(135deg, #f6d365, #fda085);
-  color: #333;
 `;
 
 export const StatsTitle = styled(Text)`
@@ -57,4 +55,12 @@ export const Card = styled(Box)`
   border-radius: 12px;
   margin-bottom: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+`;
+export const SongListWrapper = styled(Box)`
+  background-color: #f4f7fa;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: auto;
 `;

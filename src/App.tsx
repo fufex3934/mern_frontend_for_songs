@@ -8,7 +8,7 @@ import SongStats from "./components/SongStats/SongStats";
 const App: React.FC = () => {
   return (
     <Router>
-      <h1>Full Stack MERN Songs Application</h1>
+      <h1 style={{ textAlign: "center" }}>Full Stack MERN Songs Application</h1>
       <Routes>
         <Route path="/" element={<SongList />} />
         <Route path="/add" element={<AddSong />} />

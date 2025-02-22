@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import axios from "axios";
 import { addSong } from "../../redux/songSlice";
-import { AddSongWrapper, AddSongTitle, StyledInput } from "./AddSongStyles";
-import { Box, Button } from "rebass";
+import { AddSongWrapper, AddSongTitle, StyledInput,ActionButton } from "./AddSongStyles";
+import { Box } from "rebass";
 
 const AddSong: React.FC = () => {
   const dispatch = useDispatch();
@@ -74,19 +74,12 @@ const AddSong: React.FC = () => {
           placeholder="Genre"
         />
       </Box>
-      <Button
+      <ActionButton
         onClick={handleAddSong}
-        style={{
-          display: "block",
-          width: "100%",
-          padding: "12px",
-          fontSize: "16px",
-          cursor: "pointer",
-          background: "blue",
-        }}
+        
       >
         Add Song
-      </Button>
+      </ActionButton>
     </AddSongWrapper>
   );
 };

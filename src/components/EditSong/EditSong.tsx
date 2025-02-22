@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
-import { EditSongWrapper, EditTitle, StyledInput } from "./EditSongStyles";
-import { Box, Button, Text } from "rebass";
+import { EditSongWrapper, EditTitle, StyledInput,ActionButton } from "./EditSongStyles";
+import { Box,  Text } from "rebass";
 
 interface Song {
   title: string;
@@ -89,19 +89,12 @@ const EditSong: React.FC = () => {
               onChange={(e) => setSong({ ...song, genre: e.target.value })}
             />
           </Box>
-          <Button
+          <ActionButton
             onClick={handleSave}
-            style={{
-              display: "block",
-              width: "100%",
-              padding: "12px",
-              fontSize: "16px",
-              cursor: "pointer",
-              background: "blue",
-            }}
+            
           >
             Save Changes
-          </Button>
+          </ActionButton>
         </>
       ) : (
         <Text>Loading...</Text>
