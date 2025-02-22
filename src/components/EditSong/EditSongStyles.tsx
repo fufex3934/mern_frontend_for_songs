@@ -1,8 +1,6 @@
-// src/components/EditSong/EditSongStyles.tsx
 import styled from "@emotion/styled";
 import { Box, Text } from "rebass";
 
-// Styled wrapper for the form
 export const EditSongWrapper = styled(Box)`
   padding: 40px;
   max-width: 600px;
@@ -12,7 +10,6 @@ export const EditSongWrapper = styled(Box)`
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
 `;
 
-// Styled title for the form
 export const EditTitle = styled(Text)`
   font-size: 24px;
   font-weight: bold;
@@ -21,7 +18,6 @@ export const EditTitle = styled(Text)`
   margin-bottom: 20px;
 `;
 
-// Styled input fields for the form
 export const StyledInput = styled.input`
   padding: 12px;
   font-size: 16px;

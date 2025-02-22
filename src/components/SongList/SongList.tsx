@@ -1,11 +1,16 @@
-/** @jsxImportSource @emotion/react */
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { SongListWrapper, SongTitle, SongItem, ActionButton, DeleteButton, FlexWrapper } from "./SongListStyles"; // Import styles from SongListStyles
-import { Box, Text,Flex } from "rebass";
+import {
+  SongListWrapper,
+  SongTitle,
+  SongItem,
+  ActionButton,
+  DeleteButton,
+  FlexWrapper,
+} from "./SongListStyles"; // Import styles from SongListStyles
+import { Box, Text, Flex } from "rebass";
 
-// Define the Song type
 type Song = {
   _id: string;
   title: string;
@@ -20,7 +25,9 @@ const SongList: React.FC = () => {
   useEffect(() => {
     const fetchSongs = async () => {
       try {
-        const response = await axios.get("https://mern-backend-for-song.onrender.com/api/songs");
+        const response = await axios.get(
+          "https://mern-backend-for-song.onrender.com/api/songs"
+        );
         setSongs(response.data);
       } catch (error) {
         console.error("Error fetching songs:", error);
@@ -32,8 +39,10 @@ const SongList: React.FC = () => {
 
   const handleDelete = async (id: string) => {
     try {
-      await axios.delete(`https://mern-backend-for-song.onrender.com/api/songs/${id}`);
-      setSongs(songs.filter((song) => song._id !== id)); // Remove deleted song from the state
+      await axios.delete(
+        `https://mern-backend-for-song.onrender.com/api/songs/${id}`
+      );
+      setSongs(songs.filter((song) => song._id !== id));
       alert("Song deleted successfully!");
     } catch (error) {
       console.error("Error deleting song:", error);
@@ -45,7 +54,6 @@ const SongList: React.FC = () => {
     <SongListWrapper>
       <SongTitle>Song List</SongTitle>
 
-      {/* Navigation Buttons */}
       <FlexWrapper>
         <Link to="/add">
           <ActionButton mr={3}>Add New Song</ActionButton>
@@ -55,7 +63,6 @@ const SongList: React.FC = () => {
         </Link>
       </FlexWrapper>
 
-      {/* Song List */}
       <Box>
         {songs.map((song) => (
           <SongItem key={song._id}>

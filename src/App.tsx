@@ -1,8 +1,8 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Use Routes and Route from React Router v6
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SongList from "./components/SongList/SongList";
 import AddSong from "./components/AddSong/AddSong";
-import EditSong from "./components/EditSong/EditSong"; // Import EditSong if needed
+import EditSong from "./components/EditSong/EditSong";
 import SongStats from "./components/SongStats/SongStats";
 
 const App: React.FC = () => {
@@ -10,11 +10,9 @@ const App: React.FC = () => {
     <Router>
       <h1>MERN Songs</h1>
       <Routes>
-        {/* Define routes using element prop with JSX */}
         <Route path="/" element={<SongList />} />
         <Route path="/add" element={<AddSong />} />
         <Route path="/edit/:id" element={<EditSong />} />{" "}
-        {/* Define edit route */}
         <Route path="/stats" element={<SongStats />} />
       </Routes>
     </Router>

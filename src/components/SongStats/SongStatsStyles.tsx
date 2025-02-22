@@ -1,8 +1,6 @@
-// SongStats.styles.ts
 import styled from "@emotion/styled";
 import { Box, Text } from "rebass";
 
-// Styled Components for layout
 export const StatsWrapper = styled(Box)`
   padding: 40px;
   max-width: 900px;
@@ -35,7 +33,7 @@ export const StatText = styled(Text)`
   color: #555;
 `;
 
-export const  SelectDropdown = styled.select`
+export const SelectDropdown = styled.select`
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;

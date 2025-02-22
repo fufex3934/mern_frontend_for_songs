@@ -1,8 +1,6 @@
-// src/components/SongList/SongListStyles.tsx
 import styled from "@emotion/styled";
 import { Box, Text, Button, Flex } from "rebass";
 
-// Styled wrapper for the song list page
 export const SongListWrapper = styled(Box)`
   background-color: #f4f7fa;
   padding: 40px;
@@ -12,7 +10,6 @@ export const SongListWrapper = styled(Box)`
   margin: auto;
 `;
 
-// Styled title for the song list
 export const SongTitle = styled(Text)`
   font-size: 24px;
   font-weight: bold;
@@ -21,7 +18,6 @@ export const SongTitle = styled(Text)`
   margin-bottom: 20px;
 `;
 
-// Styled item for each song in the list
 export const SongItem = styled(Box)`
   background-color: white;
   padding: 12px;
@@ -39,7 +35,6 @@ export const SongItem = styled(Box)`
   }
 `;
 
-// Styled action button for editing or deleting
 export const ActionButton = styled(Button)`
   background-color: #007bff;
   color: white;
@@ -53,7 +48,6 @@ export const ActionButton = styled(Button)`
   }
 `;
 
-// Styled button for deleting a song
 export const DeleteButton = styled(ActionButton)`
   background-color: #dc3545;
 
@@ -62,7 +56,6 @@ export const DeleteButton = styled(ActionButton)`
   }
 `;
 
-// Styled container for navigation buttons
 export const FlexWrapper = styled(Flex)`
   justify-content: center;
   margin-bottom: 20px;

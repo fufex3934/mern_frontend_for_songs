@@ -24,10 +24,12 @@ const songsSlice = createSlice({
       state.songs = action.payload;
     },
     addSong(state, action: PayloadAction<Song>) {
-      state.songs.push(action.payload); // Add the new song to the state
+      state.songs.push(action.payload);
     },
     updateSong(state, action: PayloadAction<Song>) {
-      const index = state.songs.findIndex((song) => song.id === action.payload.id);
+      const index = state.songs.findIndex(
+        (song) => song.id === action.payload.id
+      );
       if (index !== -1) {
         state.songs[index] = action.payload;
       }

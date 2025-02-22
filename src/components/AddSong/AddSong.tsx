@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import axios from "axios";
 import { addSong } from "../../redux/songSlice";
-import { AddSongWrapper, AddSongTitle, StyledInput } from "./AddSongStyles"; // Import styles from AddSongStyles
+import { AddSongWrapper, AddSongTitle, StyledInput } from "./AddSongStyles";
 import { Box, Button } from "rebass";
 
 const AddSong: React.FC = () => {
@@ -26,9 +26,9 @@ const AddSong: React.FC = () => {
         "https://mern-backend-for-song.onrender.com/api/songs",
         songData
       );
-      dispatch(addSong(response.data)); // Dispatch the added song to Redux
+      dispatch(addSong(response.data));
       alert("Song added successfully!");
-      setSongData({ title: "", artist: "", album: "", genre: "" }); // Clear the form after submission
+      setSongData({ title: "", artist: "", album: "", genre: "" });
     } catch (error) {
       console.error("Error adding song", error);
       alert("Error adding song.");

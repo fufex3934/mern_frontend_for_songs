@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Text } from "rebass";
@@ -11,7 +10,6 @@ import {
   Card,
 } from "./SongStatsStyles";
 
-// Song Stats Data Interface
 interface SongStatsData {
   totalSongs: number;
   totalArtists: number;
@@ -53,7 +51,6 @@ const SongStats: React.FC = () => {
     <StatsWrapper>
       <StatsTitle>Song Statistics</StatsTitle>
 
-      {/* General Info Section */}
       <Card>
         <StatText>Total Songs: {stats.totalSongs}</StatText>
         <StatText>Total Artists: {stats.totalArtists}</StatText>
@@ -61,7 +58,6 @@ const SongStats: React.FC = () => {
         <StatText>Total Genres: {stats.totalGenres}</StatText>
       </Card>
 
-      {/* Filter by Genre */}
       <Card>
         <SectionTitle>Filter by Genre</SectionTitle>
         <SelectDropdown
@@ -77,7 +73,6 @@ const SongStats: React.FC = () => {
         </SelectDropdown>
       </Card>
 
-      {/* Songs per Genre */}
       <Card>
         <SectionTitle>Songs per Genre</SectionTitle>
         {filteredSongsByGenre.length > 0 ? (
@@ -91,7 +86,6 @@ const SongStats: React.FC = () => {
         )}
       </Card>
 
-      {/* Songs & Albums per Artist */}
       <Card>
         <SectionTitle>Songs & Albums per Artist</SectionTitle>
         {stats.songsByArtist.length > 0 ? (
@@ -105,7 +99,6 @@ const SongStats: React.FC = () => {
         )}
       </Card>
 
-      {/* Songs per Album */}
       <Card>
         <SectionTitle>Songs per Album</SectionTitle>
         {stats.songsInAlbums.length > 0 ? (
